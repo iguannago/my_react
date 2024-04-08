@@ -7,6 +7,7 @@ export function App() {
   return (
     <div>
       <NxWelcome title="my-workspace" />
+      {/* todo: add my hello world component */}
     </div>
   );
 }
