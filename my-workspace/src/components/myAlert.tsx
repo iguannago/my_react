@@ -1,5 +1,3 @@
-import { on } from 'events';
-
 interface MyAlertProps {
   children: React.ReactNode;
   onClose?: () => void;

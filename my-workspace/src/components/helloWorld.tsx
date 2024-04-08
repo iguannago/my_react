@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import MyAlert from './myAlert';
+import MyButton from './myButton';
 
 const HelloWorld = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   return (
     <div>
       {visible && (
@@ -10,7 +11,7 @@ const HelloWorld = () => {
           Hello <strong>Mr. Crespo!</strong>
         </MyAlert>
       )}
-      {/* <button onClick={() => setVisible(!visible)}>Toggle Alert</button> */}
+      <MyButton message="Click Me!" onClick={() => setVisible(true)} />
     </div>
   );
 };
