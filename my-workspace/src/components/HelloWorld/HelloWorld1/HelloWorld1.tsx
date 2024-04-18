@@ -13,7 +13,7 @@ const HelloWorld1 = ({ alertMessage }: HelloWorld1Props) => {
   return (
     <>
       {showAlert && (
-        <Alert1>
+        <Alert1 onClose={() => setShowAlert(false)}>
           <strong>Warning!</strong> {alertMessage}
         </Alert1>
       )}

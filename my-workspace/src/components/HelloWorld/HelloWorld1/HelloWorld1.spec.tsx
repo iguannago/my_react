@@ -39,4 +39,22 @@ describe('HelloWorld1', () => {
     expect(queryByText(alertMessage)).toBeTruthy();
     expect(queryByText(/Warning!/)).toBeTruthy();
   });
+
+  it('closes alert message successfully when close button is clicked', () => {
+    const alertMessage = 'This is a warning!';
+    const { getByText, queryByText, container } = render(
+      <HelloWorld1 alertMessage={alertMessage} />
+    );
+    expect(queryByText('Warning!')).toBeNull();
+
+    fireEvent.click(getByText('Warning'));
+
+    expect(queryByText(alertMessage)).toBeTruthy();
+    expect(queryByText(/Warning!/)).toBeTruthy();
+
+    fireEvent.click(container.querySelector('button') as HTMLElement);
+
+    expect(queryByText(alertMessage)).toBeNull();
+    expect(queryByText(/Warning!/)).toBeNull();
+  });
 });
