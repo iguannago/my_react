@@ -1,5 +1,5 @@
 import React from 'react';
-import Alert1 from './Alert1';
+import Alert1 from './Alert1/Alert1';
 
 interface HelloWorld1Props {
   alertMessage: string;
