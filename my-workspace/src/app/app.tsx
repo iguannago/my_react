@@ -5,7 +5,7 @@ import styles from './app.module.scss';
 export function App() {
   return (
     <div>
-      <HelloWorld1 />
+      <HelloWorld1 alertMessage={'This is an important message.'} />
     </div>
   );
 }
