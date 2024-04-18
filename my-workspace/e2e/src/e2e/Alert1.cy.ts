@@ -1,7 +1,7 @@
 describe('e2e', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    cy.contains('This is an important message.');
+  it('should display alert message', () => {
+    cy.contains('Warning This is an important message.');
   });
 });
