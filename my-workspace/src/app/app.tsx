@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import HelloWorld from 'src/components/helloWorld';
+import HelloWorld from 'src/components/HelloWorld/helloWorld';
 import styles from './app.module.scss';
 
 export function App() {
