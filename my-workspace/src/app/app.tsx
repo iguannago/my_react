@@ -14,7 +14,11 @@ export function App() {
 const Home = () => {
   return (
     <>
-      <div>Welcome to my Reactjs playground.</div>
+      <img
+        src="./assets/get-in-the-cloud.jpg"
+        className="img-fluid rounded mx-auto d-block w-100"
+        alt="get in the cloud"
+      />
       <HelloWorld1 alertMessage={'This is an important message.'} />
     </>
   );
