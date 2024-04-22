@@ -1,27 +1,27 @@
 import HelloWorld1 from 'src/components/HelloWorld/HelloWorld1/HelloWorld1';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Navigate, Routes } from 'react-router-dom';
 
 export function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/kumar"
-          element={
-            // <HelloWorld1 alertMessage={'This is an important message.'} />
-            <div>hello</div>
-          }
-        />
-        <Route
-          path="/david"
-          element={
-            <HelloWorld1 alertMessage={'This is an important message.'} />
-          }
-        />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/david" element={<David />} />
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
   );
 }
+
+const Home = () => {
+  return (
+    <>
+      <div>Welcome to my Reactjs playground.</div>
+      <HelloWorld1 alertMessage={'This is an important message.'} />
+    </>
+  );
+};
+
+const David = () => {
+  return <div>David</div>;
+};
 
 export default App;
