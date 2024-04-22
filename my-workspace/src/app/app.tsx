@@ -1,28 +1,25 @@
-import HelloWorld1 from 'src/components/HelloWorld/HelloWorld1/HelloWorld1';
-import { Route, Navigate, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Navigate,
+  Routes,
+} from 'react-router-dom';
+import Home from 'src/components/Home/Home';
+import Menu from 'src/components/Menu/Menu';
+import './app.module.scss';
 
 export function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/david" element={<David />} />
-      <Route path="*" element={<Navigate to="/" />} />
-    </Routes>
+    <Router>
+      <Menu />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/david" element={<David />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
   );
 }
-
-const Home = () => {
-  return (
-    <>
-      <img
-        src="./assets/get-in-the-cloud.jpg"
-        className="img-fluid rounded mx-auto d-block w-100"
-        alt="get in the cloud"
-      />
-      <HelloWorld1 alertMessage={'This is an important message.'} />
-    </>
-  );
-};
 
 const David = () => {
   return <div>David</div>;
