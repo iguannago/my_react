@@ -7,6 +7,7 @@ import {
 import Home from 'src/components/Home/Home';
 import Menu from 'src/components/Menu/Menu';
 import './app.module.scss';
+import HelloWorld1 from 'src/components/HelloWorld/HelloWorld1/HelloWorld1';
 
 export function App() {
   return (
@@ -14,7 +15,12 @@ export function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/hello-world" element={<div>Hello World</div>} />
+        <Route
+          path="/hello-world"
+          element={
+            <HelloWorld1 alertMessage={'This is an important message.'} />
+          }
+        />
         <Route path="/list" element={<div>List</div>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

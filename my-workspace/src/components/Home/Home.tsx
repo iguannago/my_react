@@ -1,7 +1,5 @@
-import HelloWorld1 from '../HelloWorld/HelloWorld1/HelloWorld1';
-
 const Home = () => {
-  return <HelloWorld1 alertMessage={'This is an important message.'} />;
+  return <div>Hey you!</div>;
 };
 
 export default Home;
