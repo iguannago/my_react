@@ -1,12 +1,23 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
+  const [activeItem, setActiveItem] = useState('');
+
+  const handleItemClick = (itemName: string) => {
+    setActiveItem(itemName);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <NavLink
+          className={`navbar-brand ${activeItem === 'Home' ? 'active' : ''}`}
+          to="/"
+          onClick={() => handleItemClick('Home')}
+        >
           Home
-        </Link>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,11 +32,25 @@ const Menu = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/david">
-                David
-              </Link>
+              <NavLink
+                className={`nav-link ${
+                  activeItem === 'HelloWorld' ? 'active' : ''
+                }`}
+                to="/hello-world"
+                onClick={() => handleItemClick('HelloWorld')}
+              >
+                HelloWorld
+              </NavLink>
             </li>
-            {/* Add more menu items as needed */}
+            <li className="nav-item">
+              <NavLink
+                className={`nav-link ${activeItem === 'List' ? 'active' : ''}`}
+                to="/list"
+                onClick={() => handleItemClick('List')}
+              >
+                List
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

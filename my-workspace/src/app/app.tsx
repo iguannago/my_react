@@ -14,15 +14,12 @@ export function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/david" element={<David />} />
+        <Route path="/hello-world" element={<div>Hello World</div>} />
+        <Route path="/list" element={<div>List</div>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );
 }
-
-const David = () => {
-  return <div>David</div>;
-};
 
 export default App;
