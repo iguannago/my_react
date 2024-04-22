@@ -2,21 +2,21 @@ body {
   background-image: url('../assets/pexels-pixabay-86695.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
 .footer {
-  position: relative; /* Change to relative positioning */
+  position: fixed; /* Change to fixed positioning */
+  left: 0;
+  bottom: 0;
   width: 100%;
-  background-color: #f8f9fa; /* Adjust background color as needed */
-  padding: 20px 0; /* Add padding for spacing */
+  background-color: #f8f9fa;
+  padding: 20px 0;
   text-align: center;
 }
 
 .main-container {
-  &.div {
-    height: calc(100vh - 100px); /* Adjust the value as needed */
-  }
+  min-height: calc(100vh - 100px); /* Adjust the value as needed */
+  padding-bottom: 100px; /* Adjust the value to accommodate the footer height */
 }
