@@ -6,3 +6,17 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.footer {
+  position: relative; /* Change to relative positioning */
+  width: 100%;
+  background-color: #f8f9fa; /* Adjust background color as needed */
+  padding: 20px 0; /* Add padding for spacing */
+  text-align: center;
+}
+
+.main-container {
+  &.div {
+    height: calc(100vh - 100px); /* Adjust the value as needed */
+  }
+}
