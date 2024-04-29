@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import HelloWorld2 from './HelloWorld2';
 
 describe('HelloWorld2', () => {
@@ -9,11 +9,15 @@ describe('HelloWorld2', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('renders alert message successfully', () => {
-    const { getByText } = render(
+  it('renders alert message successfully onClick', () => {
+    const { queryByText, container } = render(
       <HelloWorld2 alertMessage={'This is an important message.'} />
     );
-    expect(getByText(/This is an important message./)).toBeTruthy();
+    expect(queryByText(/This is an important message./)).toBeFalsy();
+
+    fireEvent.click(container.querySelector('button') as HTMLElement);
+
+    expect(queryByText(/This is an important message./)).toBeTruthy();
   });
 
   it('renders button component successfully', () => {
