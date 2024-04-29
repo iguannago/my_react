@@ -7,8 +7,8 @@ import {
 import Home from 'src/components/Home/Home';
 import Menu from 'src/components/Menu/Menu';
 import './app.module.scss';
-import HelloWorld1 from 'src/components/HelloWorld/HelloWorld1/HelloWorld1';
 import Footer from 'src/components/Footer/Footer';
+import HelloWorld2 from 'src/components/HelloWorld/HelloWorld2/HelloWorld2';
 
 export function App() {
   return (
@@ -21,7 +21,7 @@ export function App() {
             <Route
               path="/hello-world"
               element={
-                <HelloWorld1 alertMessage={'This is an important message.'} />
+                <HelloWorld2 alertMessage={'This is an important message.'} />
               }
             />
             <Route path="/list" element={<div>List</div>} />
